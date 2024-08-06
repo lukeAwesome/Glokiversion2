@@ -1,0 +1,179 @@
+﻿<UserControl x:Class="Gloki2._0.UI.CardPrinterTestPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+			 xmlns:kihama="clr-namespace:Tyme.Kihama.Sdk.Controls;assembly=Tyme.Kihama.Sdk.Controls"
+			 xmlns:xm="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:gif="http://wpfanimatedgif.codeplex.com"
+             xmlns:local="clr-namespace:Gloki2._0.UI"
+             Background="{DynamicResource MaterialDesignPaper}"
+		     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+		     TextElement.FontWeight="Regular"
+		     TextElement.FontSize="13"
+		     TextOptions.TextFormattingMode="Ideal"
+		     TextOptions.TextRenderingMode="Auto"
+		     FontFamily="{DynamicResource MaterialDesignFont}"
+             mc:Ignorable="d"
+             d:DesignHeight="1000" d:DesignWidth="1600">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="109*"/>
+			<RowDefinition Height="876*"/>
+		</Grid.RowDefinitions>
+		<materialDesign:Card Padding="16" Margin="8,8,8,8" Grid.RowSpan="2">
+			<materialDesign:Card Padding="16" Margin="463,31,0,30" HorizontalAlignment="Left" Width="771">
+				<TabControl Margin="0,0,0,0" Style="{DynamicResource MaterialDesignTabControl}">
+					<TabItem Header="Card Printer Event Information">
+						<DataGrid x:Name="CardPrinterLogEntries" Margin="10,10,10,10" AutoGenerateColumns="false" Style="{DynamicResource MaterialDesignDataGrid}"
+                  CanUserAddRows="False" CanUserDeleteRows="False" CanUserReorderColumns="False"
+                  CanUserResizeColumns="False" CanUserResizeRows="False" CanUserSortColumns="False" IsReadOnly="True" FontSize="13" Grid.ColumnSpan="1"/>
+					</TabItem>
+				</TabControl>
+			</materialDesign:Card>
+		</materialDesign:Card>
+		<materialDesign:Card Padding="16" Margin="0,55,20,485" Width="346" HorizontalAlignment="Right" Grid.RowSpan="2">
+			<TabControl Style="{DynamicResource MaterialDesignTabControl}" HorizontalAlignment="Right" Width="314">
+				<TabItem Header="Card Printer Details">
+					<StackPanel Grid.Column="1">
+						<TextBlock xm:Name="FingerprintProduct" Margin="16,16,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="SerialNumber" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="Vendor" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="Firmware" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="Status" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="Detected" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="RemainingRibbon" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+					</StackPanel>
+				</TabItem>
+			</TabControl>
+		</materialDesign:Card>
+		<materialDesign:Card Padding="16" Margin="20,55,0,484" HorizontalAlignment="Left" Width="455" Grid.RowSpan="2">
+			<TabControl Margin="0,0,0,0" Style="{DynamicResource MaterialDesignTabControl}">
+				<TabItem Header="Card Printer Information">
+					<StackPanel >
+						<TextBlock Margin="16,16,16,8"
+					  Style="{StaticResource MaterialDesignHeadline5TextBlock}"
+					  Text="Card Printer Test" />
+
+						<TextBlock Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text="Please follow identity scanner test prompts to test identity scanner functionality. The count down timer indicates when the tester will need to place their finger in on the identity scanner. Scan results can be viewed below."
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="Prompt" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text="Please follow document scanner test prompts to test identity scanner functionality"
+					  TextWrapping="Wrap" FontSize="13" />
+					</StackPanel>
+				</TabItem>
+			</TabControl>
+		</materialDesign:Card>
+		<Button xm:Name="DoneButton"
+	  Content="Test Complete"
+	  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType={xm:Type Window}}}"
+	  Style="{StaticResource MaterialDesignRaisedLightButton}"
+	  Margin="0,0,22,20" Height="80" Width="200" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+	  ToolTip="Resource name: MaterialDesignRaisedLightButton " Grid.Row="1" Click="DoneButton_Click"  />
+		<Button xm:Name="StartTest"
+	  Content="Print Card"
+	  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType={xm:Type Window}}}"
+	  Style="{StaticResource MaterialDesignRaisedLightButton}"
+	  Margin="0,0,227,20" Height="80" Width="200" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+	  ToolTip="Resource name: MaterialDesignRaisedLightButton " Grid.Row="1" Click="StartTest_Click"  />
+
+		<ProgressBar x:Name="loadingDisplay" IsIndeterminate="True"
+		Foreground="ForestGreen"
+                     Style="{StaticResource MaterialDesignCircularProgressBar}"
+                     Value="35"  Margin="0,307,0,0" VerticalAlignment="Top" Height="164" Grid.Row="1" HorizontalAlignment="Center" Width="150" />
+		<materialDesign:Card Padding="16" Margin="20,0,0,20" Width="455" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Bottom">
+			<TabControl Style="{DynamicResource MaterialDesignTabControl}">
+				<TabItem Header="Card Printer Config">
+					<StackPanel >
+						<ComboBox x:Name="CardTypes" Style="{DynamicResource MaterialDesignComboBox}" Height="30" Margin="10,40,10,0"
+                              VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+						<ComboBox x:Name="BarcodeTypes" Style="{DynamicResource MaterialDesignComboBox}" Height="30" Margin="10,40,10,0"
+                              VerticalAlignment="Top" VerticalContentAlignment="Center"/>
+						<TextBlock xm:Name="FingerprintProduct1" Margin="16,16,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="SerialNumber1" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="Vendor1" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="Firmware1" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="Status1" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="Detected1" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="RemainingRibbon1" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text=""
+					  TextWrapping="Wrap" />
+					</StackPanel>
+				</TabItem>
+			</TabControl>
+		</materialDesign:Card>
+	</Grid>
+</UserControl>

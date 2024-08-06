@@ -1,0 +1,133 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\luke\\Desktop\\Gloki2.0\\Gloki2.0\\Gloki2.0.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\luke\\Desktop\\Gloki2.0\\Gloki2.0\\Gloki2.0.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\luke\\Desktop\\Gloki2.0\\Gloki2.0\\Gloki2.0.csproj",
+        "projectName": "Gloki2.0",
+        "projectPath": "C:\\Users\\luke\\Desktop\\Gloki2.0\\Gloki2.0\\Gloki2.0.csproj",
+        "packagesPath": "C:\\Users\\luke\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\luke\\Desktop\\Gloki2.0\\Gloki2.0\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\luke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/tyme-innovation/auth/4e82386a-6a02-41dd-b124-dd0f7d084cc3/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "AWSSDK.Core": {
+              "target": "Package",
+              "version": "[3.7.302.4, )"
+            },
+            "AWSSDK.SimpleSystemsManagement": {
+              "target": "Package",
+              "version": "[3.7.302, )"
+            },
+            "Material.Icons": {
+              "target": "Package",
+              "version": "[1.1.35, )"
+            },
+            "MaterialDesignColors": {
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[4.8.0, )"
+            },
+            "MaterialDesignThemes.MahApps": {
+              "target": "Package",
+              "version": "[0.2.8, )"
+            },
+            "Microsoft.Azure.Management.Storage.Fluent": {
+              "target": "Package",
+              "version": "[1.38.1, )"
+            },
+            "QRCoder": {
+              "target": "Package",
+              "version": "[1.4.3, )"
+            },
+            "System.IO.Ports": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Tyme.GlobalKiosk.Iot.ApiClient": {
+              "target": "Package",
+              "version": "[0.0.0.7, )"
+            },
+            "Tyme.GlobalKiosk.Management.ApiClient": {
+              "target": "Package",
+              "version": "[0.0.0.10, )"
+            },
+            "Tyme.Kihama.Sdk": {
+              "target": "Package",
+              "version": "[0.17.8, )"
+            },
+            "Tyme.Kihama.Sdk.Common": {
+              "target": "Package",
+              "version": "[0.17.8, )"
+            },
+            "Tyme.Kihama.Sdk.Controls": {
+              "target": "Package",
+              "version": "[0.17.8, )"
+            },
+            "Tyme.Kihama.Sdk.Internal": {
+              "target": "Package",
+              "version": "[0.17.8, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

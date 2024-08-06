@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="UI\CameraTestPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\CardPrinterTestPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\DocumentScannerTestPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\FingerprintTestPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\HomeScreen.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\IdentityScannerTestPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\LightingControlsTestPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\MarketingScreenTestPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\PowerControlsTestPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\SensorTestPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\TamperControlsTestPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\CameraTestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\CardPrinterTestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\DocumentScannerTestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\FingerprintTestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\HomeScreen.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\IdentityScannerTestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\LightingControlsTestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\MarketingScreenTestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\PowerControlsTestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\SensorTestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\TamperControlsTestPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

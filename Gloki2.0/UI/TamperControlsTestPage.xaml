@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="Gloki2._0.UI.TamperControlsTestPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+			 xmlns:kihama="clr-namespace:Tyme.Kihama.Sdk.Controls;assembly=Tyme.Kihama.Sdk.Controls"
+			 xmlns:xm="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:gif="http://wpfanimatedgif.codeplex.com"
+             xmlns:local="clr-namespace:Gloki2._0.UI"
+             Background="{DynamicResource MaterialDesignPaper}"
+		     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+		     TextElement.FontWeight="Regular"
+		     TextElement.FontSize="13"
+		     TextOptions.TextFormattingMode="Ideal"
+		     TextOptions.TextRenderingMode="Auto"
+		     FontFamily="{DynamicResource MaterialDesignFont}"
+             mc:Ignorable="d"
+             d:DesignHeight="1000" d:DesignWidth="1600">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="109*"/>
+			<RowDefinition Height="876*"/>
+		</Grid.RowDefinitions>
+		<materialDesign:Card Padding="16" Margin="8,8,8,8" Grid.RowSpan="2">
+			<Button xm:Name="DoneButton"
+		  Content="Test Complete"
+		  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType={xm:Type Window}}}"
+		  Style="{StaticResource MaterialDesignRaisedLightButton}"
+		  Margin="1356,875,0,0" Height="80" VerticalAlignment="Bottom"
+		  ToolTip="Resource name: MaterialDesignRaisedLightButton " Click="DoneButton_Click" HorizontalAlignment="Right" Width="200"  />
+		</materialDesign:Card>
+
+		<materialDesign:Card Padding="16" Margin="30,10,30,418" HorizontalAlignment="Left" Width="743" Grid.Row="1">
+			<TabControl Margin="0,0,0,0" Style="{DynamicResource MaterialDesignTabControl}">
+				<TabItem Header="Tamper Board Test Information">
+					<StackPanel >
+						<TextBlock Margin="16,16,16,8"
+					  Style="{StaticResource MaterialDesignHeadline5TextBlock}"
+					  Text="Tamper relay Test" />
+
+						<TextBlock Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text="This tests the tamper relays to ensure that power functionality on the ESP32 power board is functioning as intended. Please use the test button to initiate the test."
+					  TextWrapping="Wrap" />
+
+						<TextBlock xm:Name="Prompt" Margin="16,0,16,8"
+					  VerticalAlignment="Top"
+					  Foreground="{DynamicResource MaterialDesignBodyLight}"
+					  Text="Press the test button to begin the test"
+					  TextWrapping="Wrap" FontSize="13" />
+					</StackPanel>
+				</TabItem>
+			</TabControl>
+		</materialDesign:Card>
+	</Grid>
+</UserControl>
